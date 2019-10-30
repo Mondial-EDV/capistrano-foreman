@@ -74,7 +74,7 @@ namespace :foreman do
       # this is required because 'rbenv sudo'
       # is not recognized by bundle_bins
       args.unshift(:bundle, :exec) if args[0].to_s == "foreman"
-      execute(:rbenv, :sudo, *args)
+      execute(:rbenv, :exec, *args)
     when 'rvm'
       execute(:rvmsudo, *args)
     when 'chruby'
